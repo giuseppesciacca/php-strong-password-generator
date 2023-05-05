@@ -24,8 +24,14 @@ include __DIR__ . '/helpers/functions.php';
     <main id="app_main">
         <div class="container">
             <div class="result_password">
-                Password =
-                <?= $password_for_user ?>
+                <?php if ($password_length == null): ?>
+                    Nessun parametro valido inserito
+                <?php elseif ($password_length < 6): ?>
+                    Inserire almeno un numero pari a 6 per avere una password più sicura
+                <?php else: ?>
+                    Password =
+                    <?= $password_for_user ?>
+                <?php endif ?>
             </div>
 
             <form action="" method="get">
