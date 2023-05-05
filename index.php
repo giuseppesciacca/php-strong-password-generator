@@ -23,18 +23,17 @@ include __DIR__ . '/helpers/functions.php';
 
     <main id="app_main">
         <div class="container">
+            <div class="result_password">
+                Password =
+                <?= $password_for_user ?>
+            </div>
+
             <form action="" method="get">
                 <label for="length"> Lunghezza password:</label>
                 <input type="number" name="length">
                 <button type="submit">Invia</button>
                 <button type="reset">Annulla</button>
             </form>
-
-
-            <div class="result_password">
-                Password =
-                <?= $password_for_user ?>
-            </div>
         </div>
     </main>
     <!-- /#app_main -->

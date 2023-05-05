@@ -1,5 +1,5 @@
 <?php
-$password_length = $_GET['length'];
+$password_length = $_GET['length'] ?? null;
 var_dump($password_length);
 
 $alphabet_up = range('A', 'Z');
