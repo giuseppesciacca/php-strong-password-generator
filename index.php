@@ -9,7 +9,6 @@ $charachter = array_merge($alphabetUp, $alphabetLw, $numbers);
 shuffle($charachter); //mischio l'array
 
 //prendo casualmente degli indici dall'array
-array_rand($charachter, 1);
 $random_index_charachter = array_rand($alphabetUp, $password_length);
 
 $password_for_user = '';
