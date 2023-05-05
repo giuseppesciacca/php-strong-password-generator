@@ -9,25 +9,36 @@
     margin: auto;
 }
 
-/* body {
+body {
     background-color: #001632;
-} */
+}
 
 #app_header {
     text-align: center;
+    margin: 1rem 0;
 }
 
 h1 {
     color: #7f8a98;
 }
 
-/* #app_header,
+#app_header,
 h2 {
     color: white;
 }
- */
+
+
+.result_password {
+    background-color: #cff4fc;
+    color: #001632;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+
 #app_main form {
     background-color: white;
     height: 200px;
     padding: 1rem;
+    border-radius: 0.5rem;
 }
