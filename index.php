@@ -15,8 +15,12 @@ include __DIR__ . '/views/partials/header.php';
         <form action="showPassword.php" method="get">
             <label for="length"> Lunghezza password:</label>
             <input type="number" name="length">
-            <button type="submit">Invia</button>
-            <button type="reset">Annulla</button>
+
+            <div>
+                <button type="submit" class="btn btn-primary">Invia</button>
+                <button type="reset" class="btn btn-secondary">Annulla</button>
+            </div>
+
         </form>
     </div>
 </main>
