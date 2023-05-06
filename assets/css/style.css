@@ -1,32 +1,10 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-.container {
-    max-width: 1140px;
-    margin: auto;
-}
-
 body {
     background-color: #001632;
-}
-
-#app_header {
-    text-align: center;
-    margin: 1rem 0;
 }
 
 h1 {
     color: #7f8a98;
 }
-
-#app_header,
-h2 {
-    color: white;
-}
-
 
 .result_password {
     background-color: #cff4fc;
