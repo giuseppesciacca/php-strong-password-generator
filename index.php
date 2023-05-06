@@ -1,7 +1,3 @@
-<?php
-include __DIR__ . '/helpers/functions.php';
-?>
-
 <!-- start HTML -->
 <?php
 include __DIR__ . '/views/layout/head.php';
@@ -12,9 +8,13 @@ include __DIR__ . '/views/partials/header.php';
 
 <main id="app_main">
     <div class="container">
-        <form action="showPassword.php" method="get">
-            <label for="length"> Lunghezza password:</label>
-            <input type="number" name="length">
+        <form action="./showPassword.php" method="get">
+            <div class="d-flex align-items-center justify-content-between me-5">
+                <label for="length"> Lunghezza password:</label>
+                <div class="mb-3">
+                    <input type="number" class="form-control" name="length" id="">
+                </div>
+            </div>
 
             <div>
                 <button type="submit" class="btn btn-primary">Invia</button>

@@ -14,13 +14,13 @@ include __DIR__ . '/views/partials/header.php';
 <main>
     <div class="container">
         <div class="result_password">
-            <?php if ($_SESSION['password'] == null): ?>
+            <?php if ($_GET['length'] == null): ?>
                 Nessun parametro valido inserito
-            <?php elseif ($_SESSION['password'] < 6): ?>
+            <?php elseif ($_GET['length'] < 6): ?>
                 Inserire almeno un numero pari a 6 per avere una password più sicura
             <?php else: ?>
                 Password =
-                <?= $_SESSION['password'] ?>
+                <?= $_GET['length'] ?>
             <?php endif ?>
         </div>
     </div>
