@@ -2,23 +2,11 @@
 include __DIR__ . '/helpers/functions.php';
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Strong Password Generator</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>
+<!-- start HTML -->
+<?php include __DIR__ . '/views/layout/head.php'; ?>
 
 <body>
-
-    <header id="app_header">
-        <h1>Strong Password Generator</h1>
-        <h2>Genera una passoword sicura</h2>
-    </header>
+    <?php include __DIR__ . '/views/partials/header.php'; ?>
     <!-- /#app_header -->
 
     <main id="app_main">
