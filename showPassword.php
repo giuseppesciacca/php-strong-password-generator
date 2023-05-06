@@ -20,7 +20,7 @@ include __DIR__ . '/views/partials/header.php';
                 Inserire almeno un numero pari a 6 per avere una password più sicura
             <?php else: ?>
                 Password =
-                <?= $_GET['length'] ?>
+                <?= $_SESSION['password'] ?>
             <?php endif ?>
         </div>
     </div>
