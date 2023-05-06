@@ -1,10 +1,12 @@
 <?php
+session_start();
+
 $password_length = $_GET['length'] ?? null;
 
 if ($password_length == 0) {
     $password_length = null;
 }
-var_dump($password_length);
+//var_dump($password_length);
 
 $alphabet_up = range('A', 'Z');
 $alphabet_lw = range('a', 'z');
@@ -22,4 +24,4 @@ if ($password_length != null) {
         $password_for_user .= $charachter[$value];
     }
 }
-//var_dump($password_for_user);
+$_SESSION['password'] = $password_for_user;
