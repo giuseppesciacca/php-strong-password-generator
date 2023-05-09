@@ -11,7 +11,7 @@ if ($password_length == 0) {
 $alphabet_up = range('A', 'Z');
 $alphabet_lw = range('a', 'z');
 $numbers = range('1', '9');
-$symbols = ["!", "?", "$", "%", "&", "+", "=", "[", "]"];
+$symbols = ["!", "?", "$", "%", "&", "+", "=", "[", "]", '~', '@', ':', '#', '{', '}', '(', ')'];
 
 $charachter = [];
 if ($_GET['letters'] && $_GET['numbers'] && $_GET['symbols']) {
