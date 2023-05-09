@@ -6,17 +6,12 @@ h1 {
     color: #7f8a98;
 }
 
-.result_password {
-    background-color: #cff4fc;
-    color: #001632;
-    padding: 1rem;
-    margin-bottom: 1rem;
+#app_main form {
     border-radius: 0.5rem;
 }
 
-#app_main form {
-    background-color: white;
-    height: 200px;
-    padding: 1rem;
+.result_password {
+    background-color: #cff4fc;
+    color: #001632;
     border-radius: 0.5rem;
 }
