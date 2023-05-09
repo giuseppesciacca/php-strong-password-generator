@@ -22,15 +22,15 @@ include __DIR__ . '/views/partials/header.php';
 
                         <div class="form-check mb-3">
                             <input class="form-check-input" name="repeat" id="" type="radio" value="yes" disabled> <label for="repeat">Si</label> <br>
-                            <input class="form-check-input" name="repeat" id="" type="radio" value="no" disabled> <label for="repeat">No</label>
+                            <input class="form-check-input" name="repeat" id="" type="radio" value="no" checked="checked"> <label for="repeat">No</label>
                         </div>
 
                         <div class="form-check form-check">
-                            <input class="form-check-input" type="checkbox" name="letters" id="" value="letters">
+                            <input class="form-check-input" type="checkbox" name="letters" id="" value="letters" checked="checked">
                             <label class="form-check-label" for="letters">Lettere</label>
                         </div>
                         <div class="form-check form-check">
-                            <input class="form-check-input" name="numbers" type="checkbox" id="" value="numbers">
+                            <input class="form-check-input" name="numbers" type="checkbox" id="" value="numbers" checked="checked">
                             <label class="form-check-label" for="numbers">Numeri</label>
                         </div>
                         <div class="form-check form-check">
