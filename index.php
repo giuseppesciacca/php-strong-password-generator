@@ -14,14 +14,14 @@ include __DIR__ . '/views/partials/header.php';
                     <div class="col-8">
                         <label for="length" class="mb-3 pt-1"> Lunghezza password:</label>
 
-                        <p class="pt-2">Consenti ripetizioni di uno o più caratteri: (Prossimamente)</p>
+                        <p class="pt-2">Consenti ripetizioni di uno o più caratteri:</p>
                     </div>
 
                     <div class="col-4">
                         <input type="number" class="form-control mb-3" name="length" id="">
 
                         <div class="form-check mb-3">
-                            <input class="form-check-input" name="repeat" id="" type="radio" value="yes" disabled> <label for="repeat">Si</label> <br>
+                            <input class="form-check-input" name="repeat" id="" type="radio" value="yes"> <label for="repeat">Si</label> <br>
                             <input class="form-check-input" name="repeat" id="" type="radio" value="no" checked="checked"> <label for="repeat">No</label>
                         </div>
 

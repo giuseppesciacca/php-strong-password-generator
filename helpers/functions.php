@@ -10,35 +10,59 @@ if ($password_length == 0) {
 
 $alphabet_up = range('A', 'Z');
 $alphabet_lw = range('a', 'z');
+$all_letters = array_merge($alphabet_up, $alphabet_lw);
 $numbers = range('1', '9');
 $symbols = ["!", "?", "$", "%", "&", "+", "=", "[", "]", '~', '@', ':', '#', '{', '}', '(', ')'];
 
-$charachter = [];
-if ($_GET['letters'] && $_GET['numbers'] && $_GET['symbols']) {
-    $charachter = array_merge($alphabet_up, $alphabet_lw, $numbers, $symbols);
-} elseif ($_GET['letters'] && $_GET['numbers']) {
-    $charachter = array_merge($alphabet_up, $alphabet_lw, $numbers);
-} elseif ($_GET['letters'] && $_GET['symbols']) {
-    $charachter = array_merge($alphabet_up, $alphabet_lw, $symbols);
-} elseif ($_GET['numbers'] && $_GET['symbols']) {
-    $charachter = array_merge($numbers, $symbols);
-} elseif ($_GET['letters']) {
-    $charachter = array_merge($alphabet_up, $alphabet_lw);
-} elseif ($_GET['numbers']) {
-    $charachter = array_merge($numbers);
-} elseif ($_GET['symbols']) {
-    $charachter = array_merge($symbols);
+$charachters = '';
+
+if ($_GET['letters']) {
+    $charachters .= make_string_charachters($all_letters);
 }
 
-shuffle($charachter); //mischio l'array
+if ($_GET['numbers']) {
+    $charachters .= make_string_charachters($numbers);
+}
 
-$password_for_user = '';
-if ($password_length != null) {
-    //prendo casualmente degli indici dall'array
-    $random_index_charachter = array_rand($charachter, $password_length);
+if ($_GET['symbols']) {
+    $charachters .= make_string_charachters($symbols);
+}
 
-    foreach ($random_index_charachter as $key => $value) {
-        $password_for_user .= $charachter[$value];
+$charachters = str_shuffle($charachters); //mischio la stringa
+
+$password = '';
+if ($password_length != null && $_GET['repeat'] == 'yes') {
+
+    while (strlen($password) < $password_length) {
+        //prendo un carattere casuale dalla stringa charachters.
+        $char = $charachters[rand(0, strlen($charachters) - 1)];
+        $password .= $char;
+    }
+} elseif ($password_length != null && $_GET['repeat'] == 'no') {
+
+    while (strlen($password) < $password_length) {
+        //prendo un carattere casuale dalla stringa charachters e la inserisco in password solo se diversa dalla precedente inserita.
+        $char = $charachters[rand(0, strlen($charachters) - 1)];
+        if ($char != substr($password, -1)) {
+            $password .= $char;
+        }
     }
 }
-$_SESSION['password'] = $password_for_user;
+$_SESSION['password'] = $password;
+
+
+
+/* FUNCTIONS */
+
+/**
+ * @param (Array) $array
+ * return a string with the charachter of the array 
+ */
+function make_string_charachters($array)
+{
+    $string = '';
+    foreach ($array as $key => $value) {
+        $string .= $value;
+    }
+    return $string;
+};
