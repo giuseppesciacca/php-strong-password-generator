@@ -50,26 +50,26 @@ function make_string_charachters($array)
 };
 
 /**
- * @param (number) $length
- * @param (Array) $array
+ * @param (Number) $length
+ * @param (string) $string_with_characters
  * @param (string) $repeat
  * return a string with the password
  */
-function make_password($length, $array, $repeat)
+function make_password($length, $string_with_characters, $repeat)
 {
     $password = '';
     if ($length != null && $repeat == 'yes') {
 
         while (strlen($password) < $length) {
             //prendo un carattere casuale dalla stringa charachters.
-            $char = $array[rand(0, strlen($array) - 1)];
+            $char = $string_with_characters[rand(0, strlen($string_with_characters) - 1)];
             $password .= $char;
         }
     } elseif ($length != null && $repeat == 'no') {
 
         while (strlen($password) < $length) {
             //prendo un carattere casuale dalla stringa charachters e la inserisco in password solo se diversa dalla precedente inserita.
-            $char = $array[rand(0, strlen($array) - 1)];
+            $char = $string_with_characters[rand(0, strlen($string_with_characters) - 1)];
             if ($char != substr($password, -1)) {
                 $password .= $char;
             }
